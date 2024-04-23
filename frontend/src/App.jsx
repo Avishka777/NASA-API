@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Astronomy from './pages/Astronomy';
 import Mars from './pages/Mars';
 import More from './pages/More';
+import Footers from './components/Footer';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/more" element={ <More/> }/>
 
       </Routes>
+    <Footers />
     </BrowserRouter>
   )
 }
