@@ -1,7 +1,7 @@
-import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Slides from '../components/Slides';
 import News from '../components/News';
+import Slides from '../components/Slides';
+import Discover from '../components/Discover';
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Slides />
       <News />
-
+      <Discover />
     </div>
   );
 }
