@@ -6,6 +6,7 @@ import Astronomy from './pages/Astronomy';
 import Mars from './pages/Mars';
 import More from './pages/More';
 import Footers from './components/Footer';
+import SignUp from './pages/SignUp';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/astronomy" element={ <Astronomy/> }/>
         <Route path="/mars" element={ <Mars/> }/>
         <Route path="/more" element={ <More/> }/>
+        <Route path="/sign-up" element={ <SignUp/> }/>
 
       </Routes>
     <Footers />
