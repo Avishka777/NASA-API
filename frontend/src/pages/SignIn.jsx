@@ -2,7 +2,9 @@ import logo from '../assets/logo.png';
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-export default function SignUp() {
+
+export default function Signin() {
+
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -12,9 +14,7 @@ export default function SignUp() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault(); 
-    if (!formData.firstName || 
-        !formData.lastName || 
-        !formData.userName || 
+    if (
         !formData.email || 
         !formData.password
     ) {
@@ -23,7 +23,7 @@ export default function SignUp() {
     try {
       setLoading(true);
       setErrorMessage(null);
-      const res = await fetch('/api/auth/signup', {
+      const res = await fetch('/api/auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -34,17 +34,19 @@ export default function SignUp() {
       }
       setLoading(false);
       if(res.ok) {
-        navigate('/sign-in');
+        navigate('/');
       }
     } catch (error) {
       setErrorMessage(error.message);
       setLoading(false);
     }
   };
+
   return (
-    <div className='min-h-screen mt-10'>
+    <div className='my-10'>
       <div className='flex p-3 max-w-7xl mx-auto flex-col md:flex-row md:items-center gap-5'>
-        {/* left */}
+
+        {/* Left */}
         <div className='flex-1 flex flex-col items-center justify-center mx-8'>
           <img src={logo} className="h-28 sm:h-60" alt="Company Logo" />
           <p className='text-lg mt-5 text-center'>
@@ -53,32 +55,20 @@ export default function SignUp() {
           </p>
         </div>
 
-        {/* right */}
-        <div className='flex-1 mx-8 mt-8'>
-        <div className='text-3xl mb-3 text-center font-serif text-teal-500'>
-            Create Your Account
+        {/* Right */}
+        <div className='flex-1 mx-8'>
+          <div className='text-3xl mb-3 text-center font-serif text-teal-500'>
+            Login to Your Account
           </div>
           <hr className='shadow-lg mb-2 '/>
           <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <div>
-              <Label value='First Name :' />
-              <TextInput type='text' placeholder='Enter First Name' id='firstName' className='mt-1' required onChange={handleChange}/>
-            </div>
-            <div>
-              <Label value='Last Name :' />
-              <TextInput type='text' placeholder='Enter Last Name' id='lastName' className='mt-1' required onChange={handleChange}/>
-            </div>
-            <div>
-              <Label value='User Name :' />
-              <TextInput type='text' placeholder='Enter User Name' id='userName' className='mt-1' required onChange={handleChange}/>
-            </div>
-            <div>
               <Label value='Email :' />
-              <TextInput type='email' placeholder='Enter Email Address' id='email' className='mt-1' onChange={handleChange} required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter Valid Email Address"/>
+              <TextInput type='email' placeholder='Enter Email Address' id='email' className='mt-1' required onChange={handleChange}/>
             </div>
             <div>
               <Label value='Password :' />
-              <TextInput type='password' placeholder='Enter Password' id='password' className='mt-1' onChange={handleChange} required />
+              <TextInput type='password' placeholder='Enter Password' id='password' className='mt-1' required onChange={handleChange}/>
             </div>
             <Button
               gradientDuoTone='purpleToBlue'
@@ -91,14 +81,14 @@ export default function SignUp() {
                   <span className='pl-3'>Loading...</span>
                 </>
               ) : (
-                'Create Account'
+                'Log In'
               )}
             </Button>
           </form>
-          <div className='flex gap-2 text-sm mt-5'>
-            <span>Have an account?</span>
-            <Link to='/sign-in' className='text-blue-500'>
-              Sign In
+          <div className='flex gap-2 text-sm mt-5 font-serif'>
+            <span>Don't Have An Account?</span>
+            <Link to='/sign-up' className='text-blue-500'>
+              Sign Up
             </Link>
           </div>
           {errorMessage && (

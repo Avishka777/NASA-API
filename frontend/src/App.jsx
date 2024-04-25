@@ -7,6 +7,7 @@ import Mars from './pages/Mars';
 import More from './pages/More';
 import Footers from './components/Footer';
 import SignUp from './pages/SignUp';
+import Signin from './pages/SignIn';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/mars" element={ <Mars/> }/>
         <Route path="/more" element={ <More/> }/>
         <Route path="/sign-up" element={ <SignUp/> }/>
+        <Route path="/sign-in" element={ <Signin/> }/>
 
       </Routes>
     <Footers />
