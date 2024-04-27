@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Label, Button } from 'flowbite-react';
-
 export default function Astronomy() {
   const [photoData, setPhotoData] = useState(null);
   const [selectedDate, setSelectedDate] = useState(getTodayDateString());
   const [error, setError] = useState('');
-
   useEffect(() => {
     fetchPhoto(selectedDate);
   }, []);
-
   const handleDateChange = (event) => {
     setSelectedDate(event.target.value);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     if (selectedDate) {
@@ -22,7 +18,6 @@ export default function Astronomy() {
       setError('Please select a date');
     }
   };
-
   async function fetchPhoto(date) {
     setError('');
     try {
@@ -36,7 +31,6 @@ export default function Astronomy() {
       console.error(error);
     }
   }
-
   function getTodayDateString() {
     const today = new Date();
     today.setDate(today.getDate() - 1);
@@ -45,7 +39,6 @@ export default function Astronomy() {
     const day = String(today.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   }
-
   return (
     <div className='p-10'>
       {error && <div>{error}</div>}
@@ -66,10 +59,10 @@ export default function Astronomy() {
             </form>
             <div className='mt-6'>
               <span className='text-3xl font-semibold'>{photoData.title}</span>
-              <hr className='my-2 border-2 border-blue-500 font-bold' />
+              <hr className='my-2 border-2 border-red-800 font-bold' />
               <p className='text-lg font-semibold text-zinc-700'>{photoData.date}</p>
               <br />
-              <span className='text-lg font-semibold'>{photoData.explanation}</span>
+              <p className="text-lg font-semibold text-zinc-500">{photoData.explanation}</p>
               <br />
               <p className='mt-5 text-sm font-serif text-sky-700'>View HD Image : <a href={photoData.hdurl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{photoData.hdurl}</a></p>
             </div>

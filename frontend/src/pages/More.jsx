@@ -1,21 +1,19 @@
 import { Card, CardBody, CardFooter, Typography, Button } from "@material-tailwind/react";
 import logo from '../assets/logo.png';
-
 export default function More() {
-
+  
   return (
-
     <div className="p-20 shadow-xl">
-
+      
       <div className="flex items-center justify-center mb-20">
         <img src={logo} className=" h-48 sm:h-48" alt="Company Logo" />
         <span className="text-5xl my-auto text-sky-600 font-extrabold font-serif">Browse APIs</span>
       </div>
 
-      <Card className="mt-6 w-full bg-gray-200">
+      <Card className="mt-6 w-full bg-gray-400 rounded-2xl">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">APOD | Astronomy Picture of the Day</Typography>
-        <hr className="my-2 border-2 border-t-sky-600"/>
+        <hr className="my-2 border-t-2 border-red-800"/>
         <Typography>
           One of the most popular websites at NASA is the Astronomy Picture of the Day. In fact, this website is one of the most popular websites across all federal agencies. 
           It has the popular appeal of a Justin Bieber video. This endpoint structures the APOD imagery and associated metadata so that it can be repurposed for other applications. 
@@ -28,10 +26,10 @@ export default function More() {
       </CardFooter>
     </Card>
 
-    <Card className="mt-6 w-full bg-gray-200">
+    <Card className="mt-6 w-full bg-gray-400 rounded-2xl">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">Asteroids NeoWs |  Near Earth Object Web Service</Typography>
-        <hr className="my-2 border- border-t-sky-600"/>
+        <hr className="my-2 border-t-2 border-red-800"/>
         <Typography>
           NeoWs (Near Earth Object Web Service) is a RESTful web service for near earth Asteroid information. With NeoWs a user can: search for Asteroids based on their 
           closest approach date to Earth, lookup a specific Asteroid with its NASA JPL small body id, as well as browse the overall data-set.
@@ -42,10 +40,10 @@ export default function More() {
       </CardFooter>
     </Card>
 
-    <Card className="mt-6 w-full bg-gray-200">
+    <Card className="mt-6 w-full bg-gray-400 rounded-2xl">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">DONKI | Database Of Notifications, Knowledge, Information</Typography>
-        <hr className="my-2 border- border-t-sky-600"/>
+        <hr className="my-2 border-t-2 border-red-800"/>
         <Typography>
           The Space Weather Database Of Notifications, Knowledge, Information (DONKI) is a comprehensive on-line tool for space weather forecasters, scientists, and the general 
           space science community. DONKI chronicles the daily interpretations of space weather observations, analysis, models, forecasts, and notifications provided by the Space 
@@ -58,10 +56,10 @@ export default function More() {
       </CardFooter>
     </Card>
 
-    <Card className="mt-6 w-full bg-gray-200">
+    <Card className="mt-6 w-full bg-gray-400 rounded-2xl">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">EPIC | Earth Polychromatic Imaging Camera</Typography>
-        <hr className="my-2 border- border-t-sky-600"/>
+        <hr className="my-2 border-t-2 border-red-800"/>
         <Typography>
           The EPIC API provides information on the daily imagery collected by DSCOVR's Earth Polychromatic Imaging Camera (EPIC) instrument. Uniquely positioned at the Earth-Sun 
           Lagrange point, EPIC provides full disc imagery of the Earth and captures unique perspectives of certain astronomical events such as lunar transits using a 2048x2048 
@@ -73,10 +71,10 @@ export default function More() {
       </CardFooter>
     </Card>
 
-    <Card className="mt-6 w-full bg-gray-200">
+    <Card className="mt-6 w-full bg-gray-400 rounded-2xl">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">Earth | Unlock the significant public invesment in earch observation data</Typography>
-        <hr className="my-2 border- border-t-sky-600"/>
+        <hr className="my-2 border-t-2 border-red-800"/>
         <Typography>
           Landsat imagery is provided to the public as a joint project between NASA and USGS. A recent industry report on landsat satellite imagery data estimates that total 
           annual value to the economy of $2.19 billion, far exceeding the multi-year total cost of building, launching, and managing Landsat satellites and sensors. The value 
@@ -92,10 +90,10 @@ export default function More() {
       </CardFooter>
     </Card>
 
-    <Card className="mt-6 w-full bg-gray-200">
+    <Card className="mt-6 w-full bg-gray-400 rounded-2xl">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">EONET | Earth Observatory Natural Event Tracker</Typography>
-        <hr className="my-2 border- border-t-sky-600"/>
+        <hr className="my-2 border-t-2 border-red-800"/>
         <Typography>
           One of the most popular websites at NASA is the Astronomy Picture of the Day. In fact, this website is one of the most popular websites across all federal agencies. 
           It has the popular appeal of a Justin Bieber video. This endpoint structures the APOD imagery and associated metadata so that it can be repurposed for other applications. 
@@ -107,9 +105,7 @@ export default function More() {
         <Button>Read More</Button>
       </CardFooter>
     </Card>
-
   </div>
-
-
+  
 );
 }
