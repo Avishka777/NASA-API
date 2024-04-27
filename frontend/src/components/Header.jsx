@@ -1,25 +1,31 @@
 import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react';
 import { Link, useLocation } from 'react-router-dom';
-import { AiOutlineSearch } from 'react-icons/ai';
-import { FaMoon } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { FaMoon, FaSun } from 'react-icons/fa';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleTheme } from '../redux/theme/themeSlice';
 import logo from '../assets/logo.png';
 
 export default function Header() {
   const path = useLocation().pathname;
+  const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
+  const { theme } = useSelector((state) => state.theme);
 
   return (
     <Navbar className='border-b-2'>
-
       <Link to='/' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white flex'>
         <img src={logo} className="mr-3 h-16 sm:h-16" alt="Company Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white font-serif">NASA API</span>
       </Link>
 
       <div className='flex gap-2 md:order-2'>
-        <Button className='w-14 h-12 mr-4  sm:inline' color='gray' pill>
-          <FaMoon />
+        <Button
+          className='w-14 h-12  mr-4 sm:inline rounded-lg'
+          color='gray'
+          pill
+          onClick={() => dispatch(toggleTheme())}
+        >
+          {theme === 'light' ? <FaMoon /> : <FaSun />}
         </Button>
         {currentUser ? (
           <Dropdown
