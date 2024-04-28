@@ -2,7 +2,9 @@ import logo from '../assets/logo.png';
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+
 export default function SignUp() {
+
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -41,9 +43,12 @@ export default function SignUp() {
       setLoading(false);
     }
   };
+
+
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen mt-10'>
       <div className='flex p-3 max-w-7xl mx-auto flex-col md:flex-row md:items-center gap-5'>
+
         {/* left */}
         <div className='flex-1 flex flex-col items-center justify-center mx-8'>
           <img src={logo} className="h-28 sm:h-60" alt="Company Logo" />

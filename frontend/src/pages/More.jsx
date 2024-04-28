@@ -1,8 +1,10 @@
 import { Card, CardBody, CardFooter, Typography, Button } from "@material-tailwind/react";
 import logo from '../assets/logo.png';
+
 export default function More() {
   
   return (
+
     <div className="p-20 shadow-xl">
       
       <div className="flex items-center justify-center mb-20">
@@ -105,7 +107,9 @@ export default function More() {
         <Button>Read More</Button>
       </CardFooter>
     </Card>
+
   </div>
+
   
 );
 }

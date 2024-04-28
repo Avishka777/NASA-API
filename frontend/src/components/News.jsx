@@ -8,13 +8,13 @@ import image12 from '../assets/news/image12.jpg';
 import image13 from '../assets/news/image13.jpg';
 
 export default function News() {
-
+  
     return (
       <div>
         <div className='p-20 sm:p-20'>
           <h1 className='text-2xl sm:text-4xl font-serif text-center mb-5'>Latest News</h1>
           <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold' />
-
+        
           <div className='flex flex-col sm:flex-row gap-5 sm:gap-10 mx-auto justify-center p-0'>
 
             <Card className="mt-8 sm:w-96">
@@ -76,7 +76,7 @@ export default function News() {
               <Button gradientDuoTone='purpleToBlue'>Read More</Button>
             </CardFooter>
             </Card>
-
+  
         </div>
       </div>
     </div>

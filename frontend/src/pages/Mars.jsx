@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Label, Button } from 'flowbite-react';
+const API_KEY = import.meta.env.VITE_NASA_API_KEY;
+
 export default function Mars() {
   const [photos, setPhotos] = useState([]);
   const [rover, setRover] = useState('curiosity'); // Default rover is Curiosity
   const [camera, setCamera] = useState(''); // Default camera is empty (no filter)
   const [error, setError] = useState('');
+
   useEffect(() => {
     fetchPhotos(rover, camera);
   }, [rover, camera]); // Fetch photos whenever the rover or camera changes
+
   const fetchPhotos = async (rover, camera) => {
     setError('');
     try {
-      let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/latest_photos?api_key=tMfdGz37Ta0SE7RrlyoWNyM0HFQ5uDbNpa7BFL9d&date`;
+      let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/latest_photos?api_key=${API_KEY}&date`;
       if (camera) {
         url += `&camera=${camera}`;
       }
@@ -24,12 +28,15 @@ export default function Mars() {
       console.error(error);
     }
   };
+
   const handleRoverChange = (event) => {
     setRover(event.target.value);
   };
+
   const handleCameraChange = (event) => {
     setCamera(event.target.value);
   };
+
   return (
     <div className="p-10 ">
       <form>

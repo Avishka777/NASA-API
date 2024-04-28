@@ -45,6 +45,7 @@ export default function Signin() {
   return (
     <div className='my-10'>
       <div className='flex p-3 max-w-7xl mx-auto flex-col md:flex-row md:items-center gap-5'>
+
         {/* Left */}
         <div className='flex-1 flex flex-col items-center justify-center mx-8'>
           <img src={logo} className="h-28 sm:h-60" alt="Company Logo" />
@@ -53,6 +54,7 @@ export default function Signin() {
             focuses on broadly useful and user friendly APIs and does not hold every NASA API.
           </p>
         </div>
+
         {/* Right */}
         <div className='flex-1 mx-8'>
           <div className='text-3xl mb-3 text-center font-serif text-teal-500'>

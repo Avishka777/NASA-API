@@ -7,7 +7,7 @@ import earthday from '../assets/earthday.jpg';
 
 export default function Home() {
   return (
-
+    
     <div>
       <Slides />
       <News />

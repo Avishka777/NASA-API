@@ -9,10 +9,10 @@ import image5 from '../assets/slide/image5.jpg';
 
 export default function Slides() {
   return (
-
+    
     <div>
       <Carousel autoPlay infiniteLoop showThumbs={false} interval={2000}>
-
+      
       <div className="relative">
         <img src={image2} alt="Slide 2" />
           <div className="absolute inset-0 flex flex-col p-4 sm:p-20 text-left text-white">

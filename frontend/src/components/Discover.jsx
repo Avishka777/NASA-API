@@ -11,7 +11,7 @@ export default function Discover() {
         <div className='px-20 sm:px-20'>
           <h1 className='text-2xl sm:text-4xl font-serif text-center mb-5'>Discover More Topics</h1>
           <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold' />
-
+        
           <div className='flex flex-col sm:flex-row gap-5 sm:gap-10 mx-auto justify-center p-0 my-10'>
             <Card className="relative grid h-[38rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center" >
             <CardHeader color="transparent" className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center">
@@ -22,7 +22,7 @@ export default function Discover() {
                 <Typography variant="h5" className="mb-4 text-gray-400">Missions</Typography>
             </CardBody>
             </Card>
-
+         
             <Card className="relative grid h-[38rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center" >
             <CardHeader color="transparent" className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center">
               <img src={image7} alt="card-image" className='w-full h-auto' />
@@ -32,7 +32,7 @@ export default function Discover() {
                 <Typography variant="h5" className="mb-4 text-gray-400">Citizen Science</Typography>
             </CardBody>
             </Card>
-
+          
             <Card className="relative grid h-[38rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center" >
             <CardHeader color="transparent" className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center">
               <img src={image8} alt="card-image" className='w-full h-auto' />
@@ -42,7 +42,7 @@ export default function Discover() {
                 <Typography variant="h5" className="mb-4 text-gray-400">Value of NASA</Typography>
             </CardBody>
             </Card>
-
+        
             <Card className="relative grid h-[38rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center" >
             <CardHeader color="transparent" className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center">
               <img src={image9} alt="card-image" className='w-full h-auto' />

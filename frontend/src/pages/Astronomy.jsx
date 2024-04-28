@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Label, Button } from 'flowbite-react';
+const API_KEY = import.meta.env.VITE_NASA_API_KEY;
+
 export default function Astronomy() {
   const [photoData, setPhotoData] = useState(null);
   const [selectedDate, setSelectedDate] = useState(getTodayDateString());
   const [error, setError] = useState('');
+
   useEffect(() => {
     fetchPhoto(selectedDate);
   }, []);
+
   const handleDateChange = (event) => {
     setSelectedDate(event.target.value);
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (selectedDate) {
@@ -18,11 +23,12 @@ export default function Astronomy() {
       setError('Please select a date');
     }
   };
+
   async function fetchPhoto(date) {
     setError('');
     try {
       const res = await fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=tMfdGz37Ta0SE7RrlyoWNyM0HFQ5uDbNpa7BFL9d&date=${date}`
+        `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`
       );
       const data = await res.json();
       setPhotoData(data);
@@ -31,6 +37,7 @@ export default function Astronomy() {
       console.error(error);
     }
   }
+
   function getTodayDateString() {
     const today = new Date();
     today.setDate(today.getDate() - 1);
@@ -39,6 +46,7 @@ export default function Astronomy() {
     const day = String(today.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   }
+
   return (
     <div className='p-10'>
       {error && <div>{error}</div>}
