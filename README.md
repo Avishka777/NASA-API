@@ -1,5 +1,7 @@
 # NASA API Portal
 
+Hosted URL - https://nasa-api-vx5q.onrender.com/
+
 Welcome to the NASA API Portal! This project aims to make NASA data, including imagery, readily accessible to application developers. The catalog focuses on broadly useful and user-friendly APIs while not encompassing every NASA API available.
 
 # Features
@@ -42,6 +44,16 @@ To get started with the project, follow these steps:
     -  http://localhost:5173/
 9. Login: You can log in as an admin, faculty, or student using the provided credentials.
 10. With these steps, you should now be able to run the project locally and access it through your web browser.
+
+# API Documentation
+
+You can access the API documentation for our University Timetable Management System through Postman. Please follow these steps to view the documentation:
+
+1. Open Postman and ensure you are logged in.
+2. Import the provided collection of APIs.
+3. Once imported, you can explore the available endpoints, request methods, and parameters.
+4. Each API endpoint is documented with details such as its purpose, expected input parameters, and sample responses.
+5. Test the APIs directly within Postman to familiarize yourself with their functionality.
 
 # Contact
 
