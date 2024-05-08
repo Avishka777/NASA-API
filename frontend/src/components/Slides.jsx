@@ -17,14 +17,14 @@ export default function Slides() {
         <img src={image2} alt="Slide 2" />
           <div className="absolute inset-0 flex flex-col p-4 sm:p-20 text-left text-white">
             <h2 className="text-3xl sm:text-7xl font-extrabold font-serif">National Moon Day</h2>
-            <p className="text-sm sm:text-xl mt-2 sm:mt-5 font-extrabold font-serif">
+            <p className="text-sm sm:text-xl mt-2 sm:mt-5 font-extrabold font-serif ">
               The General Assembly declared International Moon Day, a United Nations-designated international day to be observed annually on 20 July, in its resolution 76/76 on 
               “International cooperation in the peaceful uses of outer space” in 2021.
             </p>
           </div>
           <div className="absolute inset-0 flex flex-col p-4 sm:p-20 text-left justify-end text-sky-500">
-            <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold' />
-            <div className='flex gap-4 sm:gap-20 justify-end '>
+            <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold hidden sm:flex' />
+            <div className='sm:flex gap-4 sm:gap-20 justify-end hidden'>
               <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Reference</a>
               <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Documentation</a>
               <a className='text-xs sm:text-xl mt-2 sm:mt-5'>More Information</a>
@@ -42,8 +42,8 @@ export default function Slides() {
           </p>
         </div>
         <div className="absolute inset-0 flex flex-col p-4 sm:p-20 text-left justify-end text-red-600">
-          <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold' />
-          <div className='flex gap-4 sm:gap-20 justify-end '>
+          <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold hidden sm:flex' />
+          <div className='sm:flex gap-4 sm:gap-20 justify-end hidden'>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Reference</a>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Documentation</a>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>More Information</a>
@@ -61,8 +61,8 @@ export default function Slides() {
           </p>
         </div>
         <div className="absolute inset-0 flex flex-col p-4 sm:p-20 text-left justify-end text-sky-500">
-          <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold' />
-          <div className='flex gap-4 sm:gap-20 justify-end '>
+          <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold hidden sm:flex' />
+          <div className='sm:flex gap-4 sm:gap-20 justify-end hidden'>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Reference</a>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Documentation</a>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>More Information</a>
@@ -80,8 +80,8 @@ export default function Slides() {
           </p>
         </div>
         <div className="absolute inset-0 flex flex-col p-4 sm:p-20 text-left justify-end text-sky-500">
-          <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold' />
-          <div className='flex gap-4 sm:gap-20 justify-end '>
+          <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold hidden sm:flex' />
+          <div className='sm:flex gap-4 sm:gap-20 justify-end hidden'>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Reference</a>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Documentation</a>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>More Information</a>
@@ -99,8 +99,8 @@ export default function Slides() {
           </p>
         </div>
         <div className="absolute inset-0 flex flex-col p-4 sm:p-20 text-left justify-end text-sky-500">
-          <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold' />
-          <div className='flex gap-4 sm:gap-20 justify-end '>
+          <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold hidden sm:flex' />
+          <div className='sm:flex gap-4 sm:gap-20 justify-end hidden'>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Reference</a>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>Documentation</a>
             <a className='text-xs sm:text-xl mt-2 sm:mt-5'>More Information</a>
