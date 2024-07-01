@@ -5,11 +5,11 @@ export default function More() {
   
   return (
 
-    <div className="p-20 shadow-xl">
+    <div className="p-10 sm:p-20 shadow-xl">
       
       <div className="flex items-center justify-center mb-20">
-        <img src={logo} className=" h-48 sm:h-48" alt="Company Logo" />
-        <span className="text-5xl my-auto text-sky-600 font-extrabold font-serif">Browse APIs</span>
+        <img src={logo} className=" h-20 sm:h-48" alt="Company Logo" />
+        <span className="sm:text-5xl text-xl my-auto text-sky-600 font-extrabold font-serif">Browse APIs</span>
       </div>
 
       <Card className="mt-6 w-full bg-gray-400 rounded-2xl">

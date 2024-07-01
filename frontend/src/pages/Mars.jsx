@@ -38,7 +38,7 @@ export default function Mars() {
   };
 
   return (
-    <div className="p-10 ">
+    <div >
       <form>
         <div className="flex flex-col md:flex-row items-center gap-4 mt-3 md:mt-0 px-10">
           <Label htmlFor="roverSelect" className="text-sky-600 font-bold text-xl">

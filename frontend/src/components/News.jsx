@@ -11,7 +11,7 @@ export default function News() {
   
     return (
       <div>
-        <div className='p-20 sm:p-20'>
+        <div className='p-10 sm:p-20'>
           <h1 className='text-2xl sm:text-4xl font-serif text-center mb-5'>Latest News</h1>
           <hr className='my-1 sm:my-2 border-2 border-gray-500 font-bold' />
         

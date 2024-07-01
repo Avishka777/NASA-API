@@ -1,10 +1,8 @@
-import React from "react";
 import {
   Card,
   CardHeader,
   CardBody,
   Typography,
-  Avatar,
 } from "@material-tailwind/react";
 import image6 from "../assets/discover/image6.jpg";
 import image7 from "../assets/discover/image7.jpg";
@@ -14,14 +12,14 @@ import image9 from "../assets/discover/image9.jpg";
 export default function Discover() {
   return (
     <div>
-      <div className="px-20 sm:px-20">
+      <div className="px-10 sm:px-20">
         <h1 className="text-2xl sm:text-4xl font-serif text-center mb-5">
           Discover More Topics
         </h1>
         <hr className="my-1 sm:my-2 border-2 border-gray-500 font-bold" />
 
         <div className="flex flex-col sm:flex-row gap-5 sm:gap-10 mx-auto justify-center p-0 my-10">
-          <Card className="relative grid sm:h-[38rem] h-[34rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center">
+          <Card className="relative grid sm:h-[30rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center">
             <CardHeader
               color="transparent"
               className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center"
@@ -36,7 +34,7 @@ export default function Discover() {
             </CardBody>
           </Card>
 
-          <Card className="relative grid sm:h-[38rem] h-[34rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center">
+          <Card className="relative grid sm:h-[30rem]  w-full max-w-[24rem] items-end justify-center overflow-hidden text-center">
             <CardHeader
               color="transparent"
               className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center"
@@ -51,7 +49,7 @@ export default function Discover() {
             </CardBody>
           </Card>
 
-          <Card className="relative grid sm:h-[38rem] h-[34rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center">
+          <Card className="relative grid sm:h-[30rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center">
             <CardHeader
               color="transparent"
               className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center"
@@ -66,7 +64,7 @@ export default function Discover() {
             </CardBody>
           </Card>
 
-          <Card className="relative grid sm:h-[38rem] h-[34rem] w-full max-w-[24rem] items-end justify-center overflow-hidden text-center">
+          <Card className="relative grid sm:h-[30rem]  w-full max-w-[24rem] items-end justify-center overflow-hidden text-center">
             <CardHeader
               color="transparent"
               className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center"
